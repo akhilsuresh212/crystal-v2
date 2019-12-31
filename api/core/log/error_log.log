@@ -1,0 +1,14 @@
+[23-12-19, 05:13:17 PM] - [ web test ] ------------ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'oscar.building_fecility' doesn't exist
+[23-12-19, 05:33:27 PM] - [ web test ] ------------ SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '"adminpanel/resource/facility/",facilty_image) as facility_image FROM building_f' at line 1
+[23-12-19, 05:33:58 PM] - [ web test ] ------------ SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '://10.0.0.5/oscar/"adminpanel/resource/facility/",facilty_image) as facility_ima' at line 1
+[23-12-19, 05:34:41 PM] - [ web test ] ------------ SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '://10.0.0.5/oscar/adminpanel/resource/facility/,facilty_image) as facility_image' at line 1
+[23-12-19, 05:36:11 PM] - [ web test ] ------------ SQLSTATE[42S22]: Column not found: 1054 Unknown column '$image_url' in 'field list'
+[23-12-19, 05:37:34 PM] - [ web test ] ------------ SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '://10.0.0.5/oscar/adminpanel/resource/facility/,facilty_image) as facility_image' at line 1
+[26-12-19, 09:54:50 AM] - [ web test ] ------------ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'oscar.cms1' doesn't exist
+[26-12-19, 09:55:19 AM] - [ web test ] ------------ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'oscar.cms1' doesn't exist
+[26-12-19, 03:53:42 PM] - [ web test ] ------------ SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'
+[27-12-19, 09:54:02 AM] - [ web test ] ------------ SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'issue_image' cannot be null
+[27-12-19, 09:54:26 AM] - [ web test ] ------------ SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'issue_image' cannot be null
+[27-12-19, 09:54:54 AM] - [ web test ] ------------ SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+[27-12-19, 09:55:51 AM] - [ web test ] ------------ SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+[27-12-19, 10:05:15 AM] - [ web test ] ------------ SQLSTATE[42S22]: Column not found: 1054 Unknown column 'reply_message' in 'field list'

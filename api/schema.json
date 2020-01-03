@@ -1,0 +1,11 @@
+{
+  "users": {
+    "user_id": {
+      "datatype": "int",
+      "length": "10",
+      "primary": "true",
+      "auto_increment": "true",
+      "null": "true"
+    }
+  }
+}

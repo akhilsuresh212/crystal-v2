@@ -3,7 +3,7 @@
 /*************************************************************
  * 
  *************************************************************/
-require_once ABSPATH.'adminpanel/library/phpmailer/ses.php';
+require_once ABSPATH . 'adminpanel/library/phpmailer/ses.php';
 
 class Mail
 {
@@ -19,7 +19,7 @@ class Mail
     public static function renderMail($file, $find, $replace)
     {
         try {
-            $file = API_ABSPATH.'core/mail/templates/' . $file . ".html";
+            $file = API_ABSPATH . 'core/mail/templates/' . $file . ".html";
             $file = file_get_contents($file);
         } catch (Exception $e) {
             return null;
@@ -32,8 +32,8 @@ class Mail
      * @param String $subject subject of mail
      * @oaram any $headers headers of the mail
      ******************************************************************/
-    public static function sendmail($to, $subject, $headers="")
+    public static function sendmail($to, $subject, $headers = "")
     {
-        return oscarMail($to, $subject, Mail::$msg, $headers);
+        return Mail($to, $subject, Mail::$msg, $headers);
     }
 }

@@ -1,3 +1,5 @@
 {
-  "use_env": "true"
+  "environment_path": "./",
+  "auth_type": "strict",
+  "environment": "develop"
 }

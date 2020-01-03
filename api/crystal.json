@@ -1,5 +1,1 @@
-{
-  "environment_path": "./",
-  "auth_type": "strict",
-  "environment": "develop"
-}
+{"project":{"title":"test Project","description":"project desc"}}

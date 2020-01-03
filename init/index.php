@@ -30,10 +30,17 @@ class init
     private function create_user()
     {
     }
+
+    public function check_php()
+    {
+        if (PHP_VERSION_ID < 70000) {
+            echo '<div class="card p-3"> <h5>This version of PHP is not supported!</h5> <span> <p>Require 7.0+</p></span> <span> <p>Installed ' . PHP_VERSION . ' </p></span> </div>';
+            exit;
+        }
+    }
 }
 
 $init = new init();
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -43,62 +50,56 @@ $init = new init();
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
     <title>Initiating Crystal</title>
 </head>
 
 <body class="mt-10">
     <div class="container py-5">
-        <div class="col-sm-6 col-lg-6 m-auto">
-            <div class="border p-3">
-                <h3>Configure Crystal</h3>
-                <hr>
-                <div class="form-group" id="config-default">
-                    <small class="text-primary">
-                        Initiate Crystal with default settings:
-                        <ul>
-                            <li>Default Database</li>
-                            <li>Dafault configuration</li>
-                            <li>Default Admin Panel</li>
-                        </ul>
-                    </small>
-                    <button class="btn btn-sm btn-primary px-3"> Initiate with default settings </button>
-                </div>
-                <div class="form-group" id="">
-                    <button id="config-default-btn" class="btn btn-sm btn-success px-3">I want to customise</button>
-                </div>
-                <div id="config-custom-div">
-                    <form class="form" action="" method="post">
-                        <div class="form-group py-2 px-3">
-                            <div class="form-row">
-                                <label for="db_host">Host</label>
-                                <input class="form-control" placeholder="https://myhost.com" type="text" name="db_host" id="db_host">
+        <!-- Default config start -->
+        <div class="row">
+            <div class="col-sm-6 col-lg-6 m-auto">
+                <?php $init->check_php(); ?>
+                <div class="border p-3">
+                    <h3>Configure Crystal</h3>
+                    <hr>
+                    <div class="form-group" id="config-default">
+
+                        Crystal Need to be configured before using it.
+                        <small>
+                            <p>Crystal might create a database and some configuration files for this environment.</p>
+                            <ul id="steps" class="list-group list-group-flush">
+                            </ul>
+                        </small>
+                        <div id="config_details_div" class="my-3">
+                            <div class="form-group">
+                                <label for="project.name">
+                                    Project Name
+                                </label>
+                                <input type="text" placeholder="My project" name="project.name" id="project.name" class="form-control">
                             </div>
-                            <div class="form-row">
-                                <label class="mt-2" for="db_user">Username</label>
-                                <input class="form-control" type="text" name="db_user" id="db_user" placeholder="root">
+                            <div class="form-group">
+                                <label for="project.description">
+                                    Description
+                                </label>
+                                <textarea class="form-control" name="project.description" id="project.description" cols="100" rows="3" placeholder="Project Description"></textarea>
                             </div>
-                            <div class="form-row">
-                                <label class="mt-2" for="db_pass">Password</label>
-                                <input class="form-control" type="password" name="db_pass" id="db_pass">
-                            </div>
-                            <div class="form-row">
-                                <label class="mt-2" for="db_name">Database</label>
-                                <div class="input-group mb-3">
-                                    <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
-                                    <div class="input-group-prepend">
-                                        <button class="btn btn-outline-secondary" type="button">Fetch DB</button>
-                                    </div>
-                                </div>
-                            </div>
+                            <button class="btn btn-sm btn-primary">Next</button>
                         </div>
-                    </form>
+                        <button id="config_std_btn" class="btn btn-sm btn-primary px-3"> Start Now! </button>
+                    </div>
                 </div>
             </div>
+
+            <!-- default config end -->
+
         </div>
     </div>
 </body>
 
-<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-
 </html>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script src="js/index.js"></script>

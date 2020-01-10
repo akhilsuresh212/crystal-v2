@@ -1,1 +1,30 @@
-{"project":{"title":"test Project","description":"project desc"}}
+{
+  "status": "success",
+  "request": {
+    "action": "login",
+    "password": "Spellademolfpi",
+    "email": "r.maire@lfpi-hotels-gestion.com"
+  },
+  "result": {
+    "status": "subscribed",
+    "cellphone": "+330607526418",
+    "autorenew": true,
+    "name": "Rudy Maire",
+    "countryCode": "FR",
+    "reportWeekDay": 0,
+    "pushActive": true,
+    "dynGroupAccess": false,
+    "reportWeekly": false,
+    "userId": "5dda8bb3-6f53-4e9c-be12-e2a8646f9190",
+    "subscribedDate": null,
+    "reportThreshold": 5.0,
+    "role": "user",
+    "expirationDate": "2019-12-27",
+    "reportRange": 1,
+    "preferredLanguage": "FR",
+    "email": "r.maire@lfpi-hotels-gestion.com",
+    "reportDaily": false,
+    "productId": null
+  },
+  "apiVersion": 1
+}

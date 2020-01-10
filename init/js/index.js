@@ -12,6 +12,8 @@ $("#config_std_btn").click(function(e) {
     },
     dataType: "JSON",
     success: function(response) {
+      console.log(response);
+
       if (response.status === "success") {
         $("#steps").html(
           '<li class="list-group-item">Configuration file initialized. Writting data.</li>'
